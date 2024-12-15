@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="product-image">
+        <img id="product-img" src="images/protein.jpg" alt="Продукт">
+    </div>
+    <script>
+        // Динамическая загрузка изображения
+        const params = new URLSearchParams(window.location.search);
+        const product = params.get('product');
+        const imgSrc = `images/${product}.jpg`;
+        document.getElementById('product-img').src = imgSrc;
+    </script>
+</body>
+</html>
